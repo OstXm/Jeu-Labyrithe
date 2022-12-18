@@ -1,0 +1,77 @@
+///////////// MENU AVEC SWITCH CASE ////////////////////
+//////   SS PROG DANS LE MAIN /////////////////
+
+#include <stdio.h>
+
+int main (){
+
+
+int MENUENTIER(){
+    int choix;
+
+void Menu() {
+    printf ("\tMENU\n");
+    printf ("[1] Nouvelle Partie\n");
+    printf ("[2] Sauvegarer\n");
+    printf ("[3] Charger une partie\n");
+    printf ("[4] Regles\n");
+    printf ("[5] Credits\n");
+    printf ("[6] Quitter\n\n");
+}
+
+    Menu();
+
+    printf("Faites un choix\t\n\n");
+    scanf("%d", &choix);
+
+
+    switch(choix){
+        case 1 :
+            printf("combien de joueurs ?");
+            //afficher plateau, pions etc...
+            break;
+
+        case 2 :
+            printf("sauvegarde effectuee");
+            break;
+
+        case 3 :
+            printf("chanrgement de l'ancienne partie...");
+            break;
+
+        case 4 :
+            printf("voici les regles : ");
+            //afficher les regles
+            break;
+
+        case 5 :
+            int choix;
+            printf("\tCREDITS\n");
+            printf("Lea ULUSAN \n");
+            printf("Khadija IDRISSI \n");
+            printf("Octave LANQUETIN \n");
+            printf("Malo ... \n\n");
+            printf("[1]SORTIE  \n");
+            printf("sortir ?\n\n");
+            scanf("%d", &choix);
+                if (choix==1){
+                    MENUENTIER();
+                }
+
+                else {
+                    //r5
+                }
+            break;
+
+        case 6 :
+            return 0;
+            break;
+    }
+
+    }
+
+MENUENTIER();
+
+
+    return 0;
+}
