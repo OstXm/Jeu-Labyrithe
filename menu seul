@@ -40,27 +40,58 @@ void Menu() {
             break;
 
         case 4 :
-            printf("voici les regles : ");
-            //afficher les regles
-            break;
+            void regles() {
+                int choice;
+                printf("\t\t-REGLES- :\n ");
+                printf("%cVotre but:trouver tous les tresors qui vous sont atribues au debut du jeu en se deplacant dans le labyrinthe\n et revenir au point de depart\n", 0X05);
+                printf(" %c2 a 4 joueurs\n %cAucun age requis !\n\n", 0X05, 0X05);
+
+                printf("\t-Deroulement de la partie- :\n");
+                printf("%cChaque joueur va a son tour faire glisser la piece\n sur une extremite du plateau\n", 0X05);
+                printf(" ! ATTENTION IL N EST PAS POSSIBLE DE FAIRE GLISSER LA PIECE DE LA OU ELLE VIENT DE SORTIR !\n");
+                printf("%cEt ensuite bouger son pion autant qu'il le veut\n", 0X05);
+                printf("Il n'est bien sur pas possible de passer a travers les murs haha\n");
+                printf("%cVient ensuite le tour du joueur suivant... \n\n", 0X05);
+                printf("%cLe premier a avoir recupere ses tresors et etre revenu a sa case depart A GAGNE !\n\n", 0X05);
+                printf("BONNE PARTIE A TOUS\n\n");
+                printf("[1]Sortir\n");
+                scanf("%d", &choice);
+                if (choice==1){
+                    MENUENTIER();
+                }
+
+                else {
+                    regles();
+                }
+            }
+                regles();
+                //afficher les regles
+                break;
+
+
 
         case 5 :
-            int choix;
-            printf("\tCREDITS\n");
-            printf("Lea ULUSAN \n");
-            printf("Khadija IDRISSI \n");
-            printf("Octave LANQUETIN \n");
-            printf("Malo ... \n\n");
-            printf("[1]SORTIE  \n");
-            printf("sortir ?\n\n");
-            scanf("%d", &choix);
+            void credits(){
+                int choix;
+                printf("\tCREDITS\n");
+                printf("Lea ULUSAN \n");
+                printf("Khadija IDRISSI \n");
+                printf("Octave LANQUETIN \n");
+                printf("Malo ... \n\n");
+                printf("[1]SORTIE  \n");
+                printf("sortir ?\n\n");
+                scanf("%d", &choix);
                 if (choix==1){
                     MENUENTIER();
                 }
 
                 else {
-                    //r5
+                    credits();
                 }
+            }
+
+              credits();
+
             break;
 
         case 6 :
